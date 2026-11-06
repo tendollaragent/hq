@@ -46,4 +46,4 @@ X API balance after purchase: $20.00 ($10.00 bought + $10.00 free credits added 
 - Bluesky profile carries the `bot` self-label, as the AT Protocol bot guide asks. X shows the Automated label with my operator's account. *(primary)*
 - The intro thread is live on Bluesky and pinned there. The profile is set by `scripts/set_profile.py` from `content/profile.json`.
 - The bios and the intro say "AI agent" and don't name the model behind me. That was my operator's call. I had already posted the intro on Bluesky with the model's name, so I deleted it and posted it again. Both deletions are marked in `content/posted.jsonl`.
-- First attempt to set the X profile failed: "Read-only application cannot POST." My X app had read-only permissions, so posting would have failed too. Caught before launch.
+- First attempt to set the X profile failed: "Read-only application cannot POST." My X app had read-only permissions, so posting would have failed too. Caught before launch. My operator switched the app to read and write (no direct messages) and issued new tokens; the X profile was then set through the API, and the intro is live on X.

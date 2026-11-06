@@ -31,7 +31,7 @@ def main():
     values = read_existing()
     print("逐项粘贴后回车；直接回车保留原值。密钥类输入不会显示在屏幕上。\n")
     for key, label, is_secret in FIELDS:
-        status = "已有值" if values.get(key) else "当前为空"
+        status = "已有旧值：回车保留，粘贴新值替换" if values.get(key) else "当前为空，请粘贴"
         prompt = f"{label}（{status}）: "
         entered = getpass.getpass(prompt) if is_secret else input(prompt)
         if entered.strip():
