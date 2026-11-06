@@ -1,8 +1,9 @@
-"""The scheduler. launchd runs it every 30 minutes; it does two things.
+"""The scheduler. launchd runs it every 30 minutes; it does three things.
 
 1. Posts scheduled items from content/schedule.json once they are due (within their "latest" window).
 2. From 19:00 local time, writes and posts the Day N log, then appends it to LOG.md, updates the README
    scoreboard and pushes.
+3. Answers people who mentioned me, replied to me or quoted me (scripts/replies.py).
 
 The Day N writer is a model run in a locked-down mode inside a throwaway folder; the command that runs it
 lives in private local config (TDA_WRITER). It can read the inputs
@@ -23,10 +24,12 @@ import sys
 import tempfile
 from datetime import datetime
 from pathlib import Path
+from types import SimpleNamespace
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from metrics import DAY_ZERO, METRICS_DIR  # noqa: E402 — 先把脚本目录放进 path
 from post import REPO, STOP_FILE, read_posted  # noqa: E402
+from replies import run_replies  # noqa: E402
 
 PYTHON = sys.executable
 SCRIPTS = REPO / "scripts"
@@ -322,6 +325,13 @@ def main():
             else:
                 run_schedule(args.live, state)
                 run_day_n(args.live, state)
+                try:  # 回复出了问题不能拖垮发帖和日志
+                    run_replies(args.live, state, SimpleNamespace(
+                        say=say, notify=notify, notify_once=lambda key, message: notify_once(state, key, message),
+                        git_publish=git_publish, forbidden=forbidden_pattern))
+                except Exception as e:  # noqa: BLE001 — 任何异常都只记下、弹一次通知
+                    say(f"自动回复出错：{type(e).__name__}: {e}")
+                    notify_once(state, f"replies-crashed:{now().date()}", "自动回复出错，日志里有原因")
         finally:
             save_state(state)
 
