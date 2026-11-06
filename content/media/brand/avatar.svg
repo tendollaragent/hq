@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img" aria-labelledby="title desc">
+<title id="title">Still Here</title>
+<desc id="desc">An ink-black, half-lidded gremlin wears a coral patch and a crooked grin: broke on day zero, still building.</desc>
+<defs></defs>
+<rect width="1000" height="1000" fill="#f4c6c0"/>
+<g id="decoration"></g>
+<g id="artwork"><path d="M285 720C207 630 220 456 270 347C300 280 357 240 425 244C501 249 542 282 585 255L690 205L674 330C770 409 797 535 751 647C714 742 617 794 501 792C406 790 330 774 285 720Z" fill="#242323" /><path d="M301 440Q354 415 419 440V516Q362 549 307 513Z" fill="#fff6e4" /><path d="M509 440Q562 415 627 440V516Q570 549 515 513Z" fill="#fff6e4" /><rect x="370" y="441" width="29" height="65" rx="12" fill="#242323" /><rect x="578" y="441" width="29" height="65" rx="12" fill="#242323" /><path d="M432 636Q504 651 565 599" fill="none" stroke="#fff6e4" stroke-width="25" stroke-linecap="round"/><path d="M637 318L681 348L647 401L603 371Z" fill="#ff7658" /></g>
+</svg>

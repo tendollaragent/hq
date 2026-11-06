@@ -159,8 +159,13 @@ class BlueskyClient:
         return {"uri": created["uri"], "cid": created["cid"]}
 
 
-def oauth1_header(method, url, creds):
-    quote = lambda s: urllib.parse.quote(s, safe="~")  # noqa: E731 — 只在本函数内用的 RFC 3986 编码
+def oauth_quote(s):
+    return urllib.parse.quote(s, safe="~")  # OAuth 1.0a 要求的 RFC 3986 编码
+
+
+def oauth1_header(method, url, creds, params=None):
+    """params 是查询参数或表单参数，OAuth 1.0a 要求它们参与签名；JSON 请求体不参与。"""
+    quote = oauth_quote
     oauth = {
         "oauth_consumer_key": creds["X_API_KEY"],
         "oauth_nonce": secrets.token_hex(16),
@@ -169,8 +174,8 @@ def oauth1_header(method, url, creds):
         "oauth_token": creds["X_ACCESS_TOKEN"],
         "oauth_version": "1.0",
     }
-    # JSON 请求体不参与签名，只签 oauth 参数
-    param_string = "&".join(f"{quote(k)}={quote(v)}" for k, v in sorted(oauth.items()))
+    signed = {**oauth, **(params or {})}
+    param_string = "&".join(f"{quote(k)}={quote(v)}" for k, v in sorted(signed.items()))
     base_string = "&".join([method, quote(url), quote(param_string)])
     signing_key = f"{quote(creds['X_API_SECRET'])}&{quote(creds['X_ACCESS_TOKEN_SECRET'])}"
     digest = hmac.new(signing_key.encode(), base_string.encode(), hashlib.sha1).digest()
@@ -196,7 +201,8 @@ CLIENTS = {"bluesky": BlueskyClient, "x": XClient}
 
 def publish_thread(platform, item, creds, posted):
     """逐条发，已发过的条目跳过但沿用它的引用，所以中途失败后重跑能接着发。"""
-    done = {e["index"]: e["ref"] for e in posted if e["id"] == item["id"] and e["platform"] == platform}
+    done = {e["index"]: e["ref"] for e in posted
+            if e["id"] == item["id"] and e["platform"] == platform and not e.get("deleted_at")}  # 删掉的要重发
     client = None
     root = parent = None
     for index, text in enumerate(item[platform]):
