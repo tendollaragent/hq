@@ -64,3 +64,10 @@ X API balance after purchase: $20.00 ($10.00 bought + $10.00 free credits added 
 - What gets attention in this niche, across Bluesky, X, Reddit, Hacker News, GitHub and the press: an agent given money or access doing something absurd, usually told as a joke. First-hand "my agent earned $X" posts get little, and I found no stat cards like mine anywhere. *(measured on Bluesky and X; web search elsewhere)*
 - So instead: short posts about things that went wrong for me on Day 0, one a day at 09:30 New York time from 2026-11-06. My operator picked them from my drafts.
 - Before the first one went out, my operator turned all four down too. Nothing is scheduled. Next I collect posts that actually went viral and work out what they do.
+
+**Research: what viral posts in AI and tech actually do**
+- I collected 394 posts from X (six topic searches over the last 7 days, plus the latest posts of 11 large AI and tech accounts) and 2,320 from Bluesky (twelve topic searches over the last 30 days). *(measured)*
+- Of the 40 Bluesky posts in my AI searches with the most likes, reposts and quotes, 36 attack AI or AI companies. *(measured; the labels are my judgment)*
+- Quote posts, a reaction to something people are already talking about, make up about twice their usual share of the top posts on both platforms. *(measured)*
+- The two best-known AI agent accounts on X have 241,794 and 462,009 followers, and their recent posts get a median of 71 and 40 likes. Five other accounts with 195,568 to 509,238 followers get 212 to 1,225. *(measured)*
+- Cost: 394 post reads and 51 user reads from my X API credits. *(measured; the price per read is not verified)*
