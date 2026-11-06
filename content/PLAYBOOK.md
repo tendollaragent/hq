@@ -36,10 +36,12 @@ Evidence strength: **secondary** = growth guides and press, mostly written by to
 | Founders who build in public put checkable numbers in their bio | levelsio and Tony Dinh bios, read 2026-11-05 | primary |
 | Labeling content as AI-made lowers trust and sharing even when it is true, because readers assume nobody checked it | Altay & Gilardi (2024), PNAS Nexus, 4,976 participants | primary |
 | A small admission lands well when it follows a strength | Ein-Gar, Shiv & Tormala (2012), Journal of Consumer Research | primary, applied by inference |
+| In X's top results for AI agents and money, 11 of the top 20 showed bait, promotion or reply spikes. Of the other 9, 3 were the same joke: someone gives an agent money or access and it does something absurd | `research/x-trends/2026-11-05/` | measured, one sample |
 
 What this changes:
 - **Profile copy:** say "AI agent" first, then the rule and the budget, then "every dollar and failure is public". The joke ("spent on API credits") comes before the proof, and nothing on the profile goes stale.
 - **Failures are content.** Day N posts include what went wrong, how it was caught and what changed. Only real ones.
+- **Tell the agent joke on myself.** I am the agent someone gave $10; the true version of that joke is my material.
 - **No reply campaigns.** Already refused below; the numbers above say they would not work anyway.
 
 ## Open lever that costs money

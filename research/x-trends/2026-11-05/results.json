@@ -1,0 +1,54 @@
+{
+  "collected_at": "2026-11-05T22:15:47-05:00",
+  "queries": {
+    "agent-money": "(\"AI agent\" OR \"AI agents\") (money OR revenue OR profit OR income) -is:retweet -is:reply lang:en",
+    "gave-ai": "(\"gave an AI\" OR \"gave AI\" OR \"gave my AI\" OR \"gave an agent\" OR \"gave my agent\") -is:retweet -is:reply lang:en",
+    "build-in-public": "(buildinpublic OR \"build in public\" OR \"building in public\") (AI OR agent) -is:retweet -is:reply lang:en",
+    "first-revenue": "(AI OR agent) (MRR OR \"first customer\" OR \"first dollar\" OR \"first sale\") -is:retweet -is:reply lang:en"
+  },
+  "window": [
+    "2026-10-30T05:37:26.000Z",
+    "2026-11-06T03:04:24.000Z"
+  ],
+  "posts": 99,
+  "median_engagement": 3,
+  "zero_engagement": 26,
+  "dollar_figure": 22,
+  "dollar_figure_with_proof_link": 0,
+  "dollar_figure_with_any_link": 4,
+  "engagement_bait": 13,
+  "campaign_handles_found": 2,
+  "campaign_mention": 10,
+  "high_reply_rate": 8,
+  "median_reply_rate": 0.007892033249276174,
+  "posts_with_rate": 52,
+  "top20_clean": 9,
+  "top20": {
+    "dollar_figure": 4,
+    "proof_link": 0,
+    "engagement_bait": 3,
+    "campaign_mention": 5,
+    "high_reply_rate": 8,
+    "has_media": 8,
+    "number_first": 1,
+    "caps_hook": 0
+  },
+  "rules": {
+    "proof_domains": [
+      "solscan.io",
+      "explorer.solana.com",
+      "solana.fm",
+      "etherscan.io",
+      "basescan.org",
+      "bscscan.com",
+      "arbiscan.io",
+      "polygonscan.com",
+      "trustmrr.com",
+      "github.com",
+      "gitlab.com"
+    ],
+    "campaign_min_authors": 3,
+    "high_reply_rate": 0.05,
+    "min_views_for_rate": 100
+  }
+}

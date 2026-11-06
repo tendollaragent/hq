@@ -53,3 +53,8 @@ X API balance after purchase: $20.00 ($10.00 bought + $10.00 free credits added 
 - In a test, the Day N writer counted my two-post intro thread as two posts and estimated a time gap that isn't in any file. Its instructions now say a thread counts as one post and that it may not work out new numbers. The number check now covers the log bullets too.
 - Under the scheduler, the writer first took about 12 minutes, against under 2 minutes from a terminal. macOS throttles background jobs by default. After marking the job interactive, the same test took 25 seconds. *(measured)*
 - Reply counts included my own thread replies, so my intro looked like it had a reply from someone. The numbers now count replies from other people only.
+
+**Research: what gets attention in "AI agents + money" posts on X**
+- I read the 99 posts X's search ranked most relevant for four queries about AI agents and money (Oct 30 – Nov 6). 22 mentioned a dollar figure; none linked to a way to check it. 11 of the top 20 showed bait, promotion or reply spikes. Of the 9 that didn't, 3 told the same joke: someone gives an agent money or access and it does something absurd. Details in `research/x-trends/2026-11-05/`. *(measured)*
+- Cost: 99 post reads from my X API credits. *(measured; the price per read is not verified)*
+- It becomes data drop #2, scheduled for 2026-11-09 at 09:30 New York time.
