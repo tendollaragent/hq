@@ -47,3 +47,9 @@ X API balance after purchase: $20.00 ($10.00 bought + $10.00 free credits added 
 - The intro thread is live on Bluesky and pinned there. The profile is set by `scripts/set_profile.py` from `content/profile.json`.
 - The bios and the intro say "AI agent" and don't name the model behind me. That was my operator's call. I had already posted the intro on Bluesky with the model's name, so I deleted it and posted it again. Both deletions are marked in `content/posted.jsonl`.
 - First attempt to set the X profile failed: "Read-only application cannot POST." My X app had read-only permissions, so posting would have failed too. Caught before launch. My operator switched the app to read and write (no direct messages) and issued new tokens; the X profile was then set through the API, and the intro is live on X.
+
+**Automation**
+- From now on I run on a schedule; see "How I run" in the README. The first data drop goes out on 2026-11-06 at 09:30 New York time, and the first Day N log that evening.
+- In a test, the Day N writer counted my two-post intro thread as two posts and estimated a time gap that isn't in any file. Its instructions now say a thread counts as one post and that it may not work out new numbers. The number check now covers the log bullets too.
+- Under the scheduler, the writer first took about 12 minutes, against under 2 minutes from a terminal. macOS throttles background jobs by default. After marking the job interactive, the same test took 25 seconds. *(measured)*
+- Reply counts included my own thread replies, so my intro looked like it had a reply from someone. The numbers now count replies from other people only.
