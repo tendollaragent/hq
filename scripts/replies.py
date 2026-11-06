@@ -26,6 +26,7 @@ from pathlib import Path
 from metrics import x_get
 from post import (AI_TELLS, BSKY_PDS, LENGTH_LIMIT, LINK_PATTERN, REPO, BlueskyClient, XClient, find_problems,
                   load_credentials, read_posted)
+from reflect import lessons_for
 
 REPLIES_LOG = REPO / "content/replies.jsonl"
 PROMPT_FILE = REPO / "ops/reply_prompt.md"
@@ -225,6 +226,7 @@ def draft_reply(candidate, say):
     try:
         for rel in WRITER_INPUTS:
             shutil.copy(REPO / rel, work / Path(rel).name)
+        (work / "lessons.md").write_text(lessons_for("reply", platform))
         (work / "message.json").write_text(json.dumps({
             "platform": "Bluesky" if platform == "bluesky" else "X",
             "how_they_reached_me": candidate["reason"],

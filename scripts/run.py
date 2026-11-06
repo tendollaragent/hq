@@ -1,9 +1,11 @@
-"""The scheduler. launchd runs it every 30 minutes; it does three things.
+"""The scheduler. launchd runs it every 30 minutes; it does four things.
 
 1. Posts scheduled items from content/schedule.json once they are due (within their "latest" window).
 2. From 19:00 local time, writes and posts the Day N log, then appends it to LOG.md, updates the README
    scoreboard and pushes.
 3. Answers people who mentioned me, replied to me or quoted me (scripts/replies.py).
+4. Once a day, from 19:00 local time after the Day N post (or from 21:00 regardless), looks back at what I posted
+   and how it did, and updates the lessons the writers read (scripts/reflect.py).
 
 The Day N writer is a model run in a locked-down mode inside a throwaway folder; the command that runs it
 lives in private local config (TDA_WRITER). It can read the inputs
@@ -11,6 +13,7 @@ copied there and write one draft file; it cannot run commands or see the repo, s
 the scripts or checks below. Every draft passes these checks and post.py's checks before anything is posted.
 
 Dry run by default. --live posts, logs and pushes. --test-writer writes a draft for today and only prints it.
+--test-reflect runs the reflection now and only prints the proposed operations and the resulting lessons.
 Stops when the STOP file exists.
 """
 import argparse
@@ -29,6 +32,7 @@ from types import SimpleNamespace
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from metrics import DAY_ZERO, METRICS_DIR  # noqa: E402 — 先把脚本目录放进 path
 from post import AI_TELLS, REPO, STOP_FILE, read_posted  # noqa: E402
+from reflect import lessons_for, run_reflection  # noqa: E402
 from replies import run_replies  # noqa: E402
 
 PYTHON = sys.executable
@@ -187,6 +191,7 @@ def write_draft(day, today, metrics_path):
     for rel in WRITER_INPUTS:
         shutil.copy(REPO / rel, work / Path(rel).name)
     shutil.copy(metrics_path, work / "metrics.json")
+    (work / "lessons.md").write_text(lessons_for("day", "all"))
     (work / "previous").mkdir()
     for path in sorted(QUEUE_DIR.glob("day-*.json"))[-3:]:  # 最近三篇，避免重复用词
         shutil.copy(path, work / "previous" / path.name)
@@ -308,6 +313,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--live", action="store_true", help="真的发布、记日志、推送；不加则只预览")
     parser.add_argument("--test-writer", action="store_true", help="现在就写一篇今天的草稿，只打印，不动仓库")
+    parser.add_argument("--test-reflect", action="store_true", help="现在就复盘一次，只打印提议的操作和新的教训，不动仓库")
     args = parser.parse_args()
 
     if STOP_FILE.exists():
@@ -321,16 +327,24 @@ def main():
             say("上一轮还在跑，跳过")
             return
         state = load_state()
+        hooks = SimpleNamespace(
+            say=say, notify=notify, notify_once=lambda key, message: notify_once(state, key, message),
+            git_publish=git_publish, forbidden=forbidden_pattern, fully_posted=fully_posted)
         try:
             if args.test_writer:
                 run_day_n(live=False, state=state, test_writer=True)
+            elif args.test_reflect:
+                run_reflection(live=False, state=state, hooks=hooks, force=True)
             else:
                 run_schedule(args.live, state)
                 run_day_n(args.live, state)
+                try:  # 复盘出了问题不能拖垮发帖和日志
+                    run_reflection(args.live, state, hooks)
+                except Exception as e:  # noqa: BLE001 — 顶层兜底：任何异常都只记下、弹一次通知
+                    say(f"每晚复盘出错：{type(e).__name__}: {e}")
+                    notify_once(state, f"reflect-crashed:{now().date()}", "每晚复盘出错，日志里有原因")
                 try:  # 回复出了问题不能拖垮发帖和日志
-                    run_replies(args.live, state, SimpleNamespace(
-                        say=say, notify=notify, notify_once=lambda key, message: notify_once(state, key, message),
-                        git_publish=git_publish, forbidden=forbidden_pattern))
+                    run_replies(args.live, state, hooks)
                 except Exception as e:  # noqa: BLE001 — 任何异常都只记下、弹一次通知
                     say(f"自动回复出错：{type(e).__name__}: {e}")
                     notify_once(state, f"replies-crashed:{now().date()}", "自动回复出错，日志里有原因")

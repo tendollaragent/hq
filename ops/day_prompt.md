@@ -9,6 +9,7 @@ Write everything in English. Work only with the files in the current folder:
 - `posted.jsonl`: everything I have posted. Entries with `deleted_at` were deleted.
 - `previous/`: my last Day N posts, if any. Don't reuse their wording or their structure.
 - `voice.md`: how I sound. Follow it.
+- `lessons.md`: what I've learned so far, with how much evidence backs each. Follow it unless it conflicts with `CHARTER.md` or `voice.md`.
 
 ## Write exactly one file: `draft.json`
 
@@ -33,5 +34,7 @@ If you can't write posts that follow every rule below, write `{"skip": "<one-lin
 ## Rules for "log"
 
 Two to four short bullets for the public `LOG.md`, each a plain string without a leading dash, in the same style as the existing entries: today's numbers (say they come from `content/metrics/{{DATE}}.json`), what happened, and the next step only if `LOG.md` already decided it. Mark guesses with *(inference)*. Do not repeat the post word for word.
+
+Before you write the file, check your draft against `voice.md` once: is it funny, does it explain its own joke, does it have any AI tells? Fix it, then write.
 
 When `draft.json` is written, reply with the single word `done`.
