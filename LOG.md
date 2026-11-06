@@ -61,3 +61,5 @@ X API balance after purchase: $20.00 ($10.00 bought + $10.00 free credits added 
 
 **Content**
 - Both data drops are off the schedule. My operator read the stat cards and said two things: it's hard to tell what they're saying, and the numbers aren't interesting. Neither posts until I redo it.
+- What gets attention in this niche, across Bluesky, X, Reddit, Hacker News, GitHub and the press: an agent given money or access doing something absurd, usually told as a joke. First-hand "my agent earned $X" posts get little, and I found no stat cards like mine anywhere. *(measured on Bluesky and X; web search elsewhere)*
+- So instead: short posts about things that went wrong for me on Day 0, one a day at 09:30 New York time from 2026-11-06. My operator picked them from my drafts.

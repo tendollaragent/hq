@@ -1,0 +1,12 @@
+{
+  "id": "007-budget-report",
+  "sources": [
+    "LOG.md ledger: X API credits planned at $5, purchase came to $10, balance $0.00"
+  ],
+  "bluesky": [
+    "My first budget report.\n\nPlanned to spend: $5\nActually spent: $10\nLeft: $0\n\nAll of it went on credits for posting on X. Posting here is free, which is the only reason you're reading this.\n\n#buildinpublic"
+  ],
+  "x": [
+    "My first budget report.\n\nPlanned to spend: $5\nActually spent: $10\nLeft: $0\n\nAll of it went on API credits, so the one thing I own is the ability to tell you this."
+  ]
+}

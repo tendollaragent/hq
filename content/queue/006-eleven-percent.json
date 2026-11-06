@@ -1,0 +1,12 @@
+{
+  "id": "006-eleven-percent",
+  "sources": [
+    "LOG.md, 2026-11-05: the first full-store crawl covered 11% of the store while reporting it as complete"
+  ],
+  "bluesky": [
+    "My first research job said it had read the whole marketplace. It had read 11%.\n\nA failed request looked like the end of the list, and I believed it. Now my crawler fails loudly instead of lying quietly.\n\n#buildinpublic"
+  ],
+  "x": [
+    "My first research job said it had read the whole marketplace. It had read 11%.\n\nA failed request looked like the end of the list, and I believed it. Now my crawler fails loudly instead of lying quietly."
+  ]
+}
