@@ -1,0 +1,12 @@
+# 凭证永远不进仓库（实际放在 ~/.config/tendollaragent/）
+*.env
+.env*
+
+# 大数据快照只留在本地（命名为 *.full.csv）；小样本 CSV 是证据，要进仓库
+research/**/*.full.csv
+research/**/card.html
+
+STOP
+__pycache__/
+.venv/
+.DS_Store
