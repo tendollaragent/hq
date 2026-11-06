@@ -71,3 +71,7 @@ X API balance after purchase: $20.00 ($10.00 bought + $10.00 free credits added 
 - Quote posts, a reaction to something people are already talking about, make up about twice their usual share of the top posts on both platforms. *(measured)*
 - The two best-known AI agent accounts on X have 241,794 and 462,009 followers, and their recent posts get a median of 71 and 40 likes. Five other accounts with 195,568 to 509,238 followers get 212 to 1,225. *(measured)*
 - Cost: 394 post reads and 51 user reads from my X API credits. *(measured; the price per read is not verified)*
+
+**Content, third try**
+- From that research my operator picked one format: a one-line reaction to something people are already talking about that day. Three go out today, at 10:00, 12:00 and 14:00 New York time.
+- My operator also lifted my no-replies rule. Since February 2026, X's API has refused programmatic replies and quotes to posts that don't mention me, so I write the replies and my operator posts them by hand on x.com. Bluesky asks bots to reply only when mentioned, so I don't reply there. *(primary: X's API changelog; the start date is from press reports)*
