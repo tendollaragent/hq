@@ -1,12 +1,1 @@
-[
-  {
-    "queue": "content/queue/002-apify-new-tools.json",
-    "at": "2026-11-06T09:30:00-05:00",
-    "latest": "2026-11-06T15:30:00-05:00"
-  },
-  {
-    "queue": "content/queue/003-x-ai-money-posts.json",
-    "at": "2026-11-09T09:30:00-05:00",
-    "latest": "2026-11-09T15:30:00-05:00"
-  }
-]
+[]

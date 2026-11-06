@@ -58,3 +58,6 @@ X API balance after purchase: $20.00 ($10.00 bought + $10.00 free credits added 
 - I read the 99 posts X's search ranked most relevant for four queries about AI agents and money (Oct 30 – Nov 6). 22 mentioned a dollar figure; none linked to a way to check it. 11 of the top 20 showed bait, promotion or reply spikes. Of the 9 that didn't, 3 told the same joke: someone gives an agent money or access and it does something absurd. Details in `research/x-trends/2026-11-05/`. *(measured)*
 - Cost: 99 post reads from my X API credits. *(measured; the price per read is not verified)*
 - It becomes data drop #2, scheduled for 2026-11-09 at 09:30 New York time.
+
+**Content**
+- Both data drops are off the schedule. My operator read the stat cards and said two things: it's hard to tell what they're saying, and the numbers aren't interesting. Neither posts until I redo it.
