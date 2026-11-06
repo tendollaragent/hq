@@ -24,12 +24,12 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from metrics import x_get
-from post import (BSKY_PDS, LENGTH_LIMIT, LINK_PATTERN, REPO, BlueskyClient, XClient, find_problems,
+from post import (AI_TELLS, BSKY_PDS, LENGTH_LIMIT, LINK_PATTERN, REPO, BlueskyClient, XClient, find_problems,
                   load_credentials, read_posted)
 
 REPLIES_LOG = REPO / "content/replies.jsonl"
 PROMPT_FILE = REPO / "ops/reply_prompt.md"
-WRITER_INPUTS = ["CHARTER.md", "LOG.md", "content/PLAYBOOK.md"]
+WRITER_INPUTS = ["CHARTER.md", "LOG.md", "content/PLAYBOOK.md", "ops/voice.md"]
 NUMBER_SOURCES = ["CHARTER.md", "LOG.md", "content/PLAYBOOK.md"]
 NUMBER = re.compile(r"\d[\d,]*(?:\.\d+)?")
 
@@ -230,6 +230,7 @@ def draft_reply(candidate, say):
             "how_they_reached_me": candidate["reason"],
             "my_post_they_are_responding_to": candidate["context"],
             "their_post": body_text(candidate["text"]),
+            "my_recent_replies": [e["text"] for e in read_replies()[-6:]],
         }, ensure_ascii=False, indent=2) + "\n")
         prompt = (PROMPT_FILE.read_text().replace("{{PLATFORM}}", "Bluesky" if platform == "bluesky" else "X")
                   .replace("{{LIMIT}}", str(LENGTH_LIMIT[platform])))
@@ -262,6 +263,9 @@ def check_reply(text, platform, forbidden):
         problems.append(f"含禁用内容：{hit.group()}")
     if re.search(r"(?<!\w)#\w", text):
         problems.append("含话题标签")
+    tell = AI_TELLS.search(text)
+    if tell:
+        problems.append(f"有 AI 腔：{tell.group()!r}")
     unknown = {n.replace(",", "") for n in NUMBER.findall(text)} - allowed_numbers()
     if unknown:
         problems.append(f"有来源里找不到的数字：{sorted(unknown)}")

@@ -28,7 +28,7 @@ from types import SimpleNamespace
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from metrics import DAY_ZERO, METRICS_DIR  # noqa: E402 — 先把脚本目录放进 path
-from post import REPO, STOP_FILE, read_posted  # noqa: E402
+from post import AI_TELLS, REPO, STOP_FILE, read_posted  # noqa: E402
 from replies import run_replies  # noqa: E402
 
 PYTHON = sys.executable
@@ -41,7 +41,7 @@ DAY_N_HOUR = 19
 FIRST_DAY_N = 1
 MAX_WRITER_ATTEMPTS = 2  # 每天最多让模型写两次，失败就停下等人看
 WRITER_TIMEOUT = 30 * 60
-WRITER_INPUTS = ["CHARTER.md", "LOG.md", "content/PLAYBOOK.md", "content/posted.jsonl"]
+WRITER_INPUTS = ["CHARTER.md", "LOG.md", "content/PLAYBOOK.md", "content/posted.jsonl", "ops/voice.md"]
 # 写作命令和额外禁用词放在本机私有配置里，不进公开仓库
 PRIVATE_DIR = Path.home() / ".config/tendollaragent"
 PRIVATE_WORDS_FILE = PRIVATE_DIR / "forbidden_words.txt"
@@ -157,6 +157,8 @@ def check_draft(draft, day, metrics_path):
         for text in posts:
             if forbidden.search(text):
                 problems.append(f"{platform} 含禁用内容：{forbidden.search(text).group()}")
+            if AI_TELLS.search(text):
+                problems.append(f"{platform} 有 AI 腔：{AI_TELLS.search(text).group()!r}")
             unknown = {n.replace(",", "") for n in NUMBER.findall(text)} - allowed
             if unknown:
                 problems.append(f"{platform} 有来源里找不到的数字：{sorted(unknown)}")

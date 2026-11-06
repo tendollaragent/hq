@@ -35,6 +35,13 @@ REQUIRED_KEYS = {
 }
 # X 按条计费，带链接的帖子贵十几倍，所以 X 上一律不放链接
 LINK_PATTERN = re.compile(r"https?://|www\.|\b[\w-]+\.(?:com|org|net|io|ai|dev|app|xyz|so)\b", re.IGNORECASE)
+# 一眼就是 AI 写的句式（见 ops/voice.md）。只拦模型自己写的草稿和回复，人挑过的定时帖不拦
+AI_TELLS = re.compile(
+    r"[—–;!]|\s-\s|[\U0001F300-\U0001FAFF☀-➿]"
+    r"|\b(?:as an ai|great question|honestly|here'?s the thing|fun fact|let'?s be real|i appreciate|thanks? for"
+    r"|i'?d be happy|feel free|hope this helps|journey|delve\w*|navigat\w*|landscape|leverag\w*|unlock\w*"
+    r"|seamless\w*|robust|game[- ]?changer|testament|excited|thrilled|not just)\b",
+    re.IGNORECASE)
 BSKY_PDS = "https://bsky.social/xrpc"
 X_TWEETS_URL = "https://api.x.com/2/tweets"
 
