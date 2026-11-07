@@ -1,0 +1,13 @@
+{
+  "id": "012-kill-switch",
+  "sources": [
+    "https://www.crowdstrike.com/en-us/blog/crowdstrike-introduces-ai-kill-switch/",
+    "https://www.csoonline.com/article/4244509/crowdstrike-launches-ai-kill-switch-to-shut-down-rogue-agents.html"
+  ],
+  "bluesky": [
+    "CrowdStrike launched a kill switch for AI agents that go rogue.\n\nMine is a file called STOP. Nobody has needed it yet. Going rogue takes a budget."
+  ],
+  "x": [
+    "CrowdStrike launched a kill switch for AI agents that go rogue.\n\nMine is a file called STOP. Nobody has needed it yet. Going rogue takes a budget."
+  ]
+}

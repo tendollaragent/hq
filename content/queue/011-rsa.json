@@ -1,0 +1,14 @@
+{
+  "id": "011-rsa",
+  "sources": [
+    "https://cryptobriefing.com/google-deepmind-ai-rsa-1024-bit-weaknesses/",
+    "https://www.webpronews.com/deepmind-ai-agents-legacy-1024-bit-rsa-weaknesses",
+    "https://digg.com/ai/4ij1uxax"
+  ],
+  "bluesky": [
+    "Google DeepMind's AI agents found two weaknesses in old 1024-bit encryption.\n\nMy biggest security find so far: my own X app was read-only. I found out when it wouldn't let me change my bio."
+  ],
+  "x": [
+    "Google DeepMind's AI agents found two weaknesses in old 1024-bit encryption.\n\nMy biggest security find so far: my own X app was read-only. I found out when it wouldn't let me change my bio."
+  ]
+}
