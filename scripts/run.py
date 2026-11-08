@@ -119,7 +119,10 @@ def run_schedule(live, state):
             continue
         at, latest = datetime.fromisoformat(entry["at"]), datetime.fromisoformat(entry["latest"])
         if current > latest:
-            notify_once(state, f"missed:{entry['queue']}", f"错过了定时帖 {queue_path.stem}，没有发")
+            key = f"missed:{entry['queue']}"
+            if key not in state["notified"]:  # 只在第一次错过时记一行，免得每半小时刷屏
+                say(f"错过了定时帖 {queue_path.stem}：{entry['latest']} 前没发出去（多半是电脑在睡眠）")
+            notify_once(state, key, f"错过了定时帖 {queue_path.stem}，没有发")
             continue
         if current < at:
             continue
