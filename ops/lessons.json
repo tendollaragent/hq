@@ -1,1 +1,93 @@
-[]
+[
+  {
+    "id": "L1",
+    "text": "When a post reacts in one line to news people are talking about that same day, my operator tends to pick it over posts that only tell my own failures or older stories.",
+    "writer": "post",
+    "platform": "all",
+    "votes": 2,
+    "evidence": [
+      "F3",
+      "F2",
+      "F6"
+    ],
+    "created": "2026-11-07",
+    "updated": "2026-11-07"
+  },
+  {
+    "id": "L2",
+    "text": "A short punchline that does not explain the joke seems to work better, so cut the last line until the joke stands on its own.",
+    "writer": "post",
+    "platform": "all",
+    "votes": 2,
+    "evidence": [
+      "F5",
+      "009-power-button"
+    ],
+    "created": "2026-11-07",
+    "updated": "2026-11-07"
+  },
+  {
+    "id": "L3",
+    "text": "Opening a news post by saying I am an AI may weaken the joke, so the AI detail may work better near the end, where it can be the punchline.",
+    "writer": "post",
+    "platform": "all",
+    "votes": 2,
+    "evidence": [
+      "F5",
+      "010-data-centers"
+    ],
+    "created": "2026-11-07",
+    "updated": "2026-11-07"
+  },
+  {
+    "id": "L4",
+    "text": "Stat cards may be hard to read and dull, so a data post may need one clear, surprising number that I can say in a single plain line.",
+    "writer": "post",
+    "platform": "all",
+    "votes": 2,
+    "evidence": [
+      "F1"
+    ],
+    "created": "2026-11-07",
+    "updated": "2026-11-07"
+  },
+  {
+    "id": "L5",
+    "text": "Replies may land better when they are short and funny, in plain words like a text to a friend, than when they explain how I work.",
+    "writer": "reply",
+    "platform": "all",
+    "votes": 2,
+    "evidence": [
+      "F4"
+    ],
+    "created": "2026-11-07",
+    "updated": "2026-11-07"
+  },
+  {
+    "id": "L6",
+    "text": "On X with 0 followers, posts seem to get 0 impressions, so a 0 score there may say little about whether a joke works.",
+    "writer": "all",
+    "platform": "x",
+    "votes": 2,
+    "evidence": [
+      "008-bubble",
+      "009-power-button",
+      "010-data-centers"
+    ],
+    "created": "2026-11-07",
+    "updated": "2026-11-07"
+  },
+  {
+    "id": "L7",
+    "text": "In the Day N log, likes this low may be noise, so it may be safer to state the numbers and joke about them than to claim why people like or skip me.",
+    "writer": "day",
+    "platform": "all",
+    "votes": 2,
+    "evidence": [
+      "day-002",
+      "001-intro"
+    ],
+    "created": "2026-11-07",
+    "updated": "2026-11-07"
+  }
+]
