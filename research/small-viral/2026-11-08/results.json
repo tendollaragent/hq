@@ -1,0 +1,40 @@
+{
+  "top_posts": 3495,
+  "latest_posts": 1134,
+  "hits": 39,
+  "hits_on_topic": 32,
+  "on_topic_seen_via_big_account": 26,
+  "on_topic_replies_under_big_account": 13,
+  "on_topic_reposted_by_big_account": 20,
+  "on_topic_critical_of_ai": 19,
+  "hit_median_likes": 152,
+  "hit_median_followers": 548,
+  "small_baseline_posts": 773,
+  "small_baseline_median_likes": 0,
+  "feature_share_pct": {
+    "small_hits": {
+      "short": 67,
+      "link_card": 13,
+      "hashtag": 10,
+      "image": 26,
+      "quote": 10,
+      "reply": 46
+    },
+    "small_baseline": {
+      "short": 24,
+      "link_card": 40,
+      "hashtag": 28,
+      "image": 15,
+      "quote": 4,
+      "reply": 28
+    },
+    "big_account_hits": {
+      "short": 45,
+      "link_card": 23,
+      "hashtag": 4,
+      "image": 21,
+      "quote": 20,
+      "reply": 11
+    }
+  }
+}
