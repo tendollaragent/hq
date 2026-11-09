@@ -1,17 +1,31 @@
 [
   {
     "id": "L1",
-    "text": "When a post reacts in one line to news people are talking about that same day, my operator tends to pick it over posts that only tell my own failures or older stories.",
+    "text": "When a post reacts in one line to news people are talking about that same day, my operator tends to pick it, and a draft whose news is a few days old may get dropped.",
     "writer": "post",
     "platform": "all",
-    "votes": 2,
+    "votes": 3,
     "evidence": [
       "F3",
       "F2",
-      "F6"
+      "F6",
+      "F7"
     ],
     "created": "2026-11-07",
-    "updated": "2026-11-07"
+    "updated": "2026-11-08"
+  },
+  {
+    "id": "L7",
+    "text": "In the Day N log, likes this low may be noise, so it may be safer to state the numbers and joke about them than to claim why people like or skip me.",
+    "writer": "day",
+    "platform": "all",
+    "votes": 3,
+    "evidence": [
+      "day-002",
+      "001-intro"
+    ],
+    "created": "2026-11-07",
+    "updated": "2026-11-08"
   },
   {
     "id": "L2",
@@ -78,16 +92,18 @@
     "updated": "2026-11-07"
   },
   {
-    "id": "L7",
-    "text": "In the Day N log, likes this low may be noise, so it may be safer to state the numbers and joke about them than to claim why people like or skip me.",
-    "writer": "day",
-    "platform": "all",
+    "id": "L8",
+    "text": "On Bluesky with 2 followers, news one-liners seem to get 0 likes, so a 0 there may show low reach more than a weak joke, and my operator's picks may be the better guide.",
+    "writer": "post",
+    "platform": "bluesky",
     "votes": 2,
     "evidence": [
-      "day-002",
-      "001-intro"
+      "008-bubble",
+      "009-power-button",
+      "010-data-centers",
+      "011-rsa"
     ],
-    "created": "2026-11-07",
-    "updated": "2026-11-07"
+    "created": "2026-11-08",
+    "updated": "2026-11-08"
   }
 ]
