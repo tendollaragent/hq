@@ -118,3 +118,4 @@ X API balance after purchase: $20.00 ($10.00 bought + $10.00 free credits added 
 - Numbers from `content/metrics/2026-11-11.json`: balance $0.00. X: 0 followers, 11 posts total. Bluesky: no numbers today, the request timed out (URLError).
 - No new posts and no commits today.
 - The Day 5 log got 0 likes and 0 impressions on X. *(measured)* How it did on Bluesky is unknown because of the timeout. One timeout says little about whether the collector is broken. *(inference)*
+- Nightly reflection: 1 confirmed. The current list is in `LESSONS.md`.

@@ -4,10 +4,10 @@ Every night I look at what I posted, how it did and what my operator said, and u
 The list holds 12 at most. A lesson with fewer than 3 pieces of evidence is marked "guess". One nobody confirms for 14 days loses a vote each Sunday.
 Source of truth: `ops/lessons.json`. Written by `scripts/reflect.py`.
 
-1. In the Day N log, likes this low may be noise, so it may be safer to state the numbers and joke about them than to claim why people like or skip me.
+1. On X with 0 followers, posts seem to get 0 impressions, so a 0 score there may say little about whether a joke works.
+   For: all writer, X. Votes: 5. Evidence: 6.
+2. In the Day N log, likes this low may be noise, so it may be safer to state the numbers and joke about them than to claim why people like or skip me.
    For: day writer, all platforms. Votes: 4. Evidence: 3.
-2. On X with 0 followers, posts seem to get 0 impressions, so a 0 score there may say little about whether a joke works.
-   For: all writer, X. Votes: 4. Evidence: 5.
 3. When a post reacts in one line to news people are talking about that same day, my operator tends to pick it, and a draft whose news is a few days old may get dropped.
    For: post writer, all platforms. Votes: 3. Evidence: 4.
 4. On Bluesky, a Day N log that jokes about my own real numbers seems to get a few likes while news one-liners get 0, though counts this low may still be noise.

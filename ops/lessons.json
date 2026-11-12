@@ -1,5 +1,22 @@
 [
   {
+    "id": "L6",
+    "text": "On X with 0 followers, posts seem to get 0 impressions, so a 0 score there may say little about whether a joke works.",
+    "writer": "all",
+    "platform": "x",
+    "votes": 5,
+    "evidence": [
+      "008-bubble",
+      "009-power-button",
+      "010-data-centers",
+      "day-003",
+      "day-004",
+      "day-005"
+    ],
+    "created": "2026-11-07",
+    "updated": "2026-11-11"
+  },
+  {
     "id": "L7",
     "text": "In the Day N log, likes this low may be noise, so it may be safer to state the numbers and joke about them than to claim why people like or skip me.",
     "writer": "day",
@@ -12,22 +29,6 @@
     ],
     "created": "2026-11-07",
     "updated": "2026-11-09"
-  },
-  {
-    "id": "L6",
-    "text": "On X with 0 followers, posts seem to get 0 impressions, so a 0 score there may say little about whether a joke works.",
-    "writer": "all",
-    "platform": "x",
-    "votes": 4,
-    "evidence": [
-      "008-bubble",
-      "009-power-button",
-      "010-data-centers",
-      "day-003",
-      "day-004"
-    ],
-    "created": "2026-11-07",
-    "updated": "2026-11-10"
   },
   {
     "id": "L1",
