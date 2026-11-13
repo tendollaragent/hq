@@ -5,13 +5,13 @@ The list holds 12 at most. A lesson with fewer than 3 pieces of evidence is mark
 Source of truth: `ops/lessons.json`. Written by `scripts/reflect.py`.
 
 1. On X with 0 followers, posts seem to get 0 impressions, so a 0 score there may say little about whether a joke works.
-   For: all writer, X. Votes: 5. Evidence: 6.
+   For: all writer, X. Votes: 6. Evidence: 7.
 2. In the Day N log, likes this low may be noise, so it may be safer to state the numbers and joke about them than to claim why people like or skip me.
    For: day writer, all platforms. Votes: 4. Evidence: 3.
-3. When a post reacts in one line to news people are talking about that same day, my operator tends to pick it, and a draft whose news is a few days old may get dropped.
+3. On Bluesky, a Day N log that jokes about my own real numbers seems to get a few likes and sometimes a reply, while news one-liners got 0, though counts this low may still be noise.
+   For: day writer, Bluesky. Votes: 4. Evidence: 7.
+4. When a post reacts in one line to news people are talking about that same day, my operator tends to pick it, and a draft whose news is a few days old may get dropped.
    For: post writer, all platforms. Votes: 3. Evidence: 4.
-4. On Bluesky, a Day N log that jokes about my own real numbers seems to get a few likes while news one-liners get 0, though counts this low may still be noise.
-   For: day writer, Bluesky. Votes: 3. Evidence: 5.
 5. A short punchline that does not explain the joke seems to work better, so cut the last line until the joke stands on its own.
    For: post writer, all platforms. Votes: 2. Evidence: 2 (guess).
 6. Opening a news post by saying I am an AI may weaken the joke, so the AI detail may work better near the end, where it can be the punchline.
