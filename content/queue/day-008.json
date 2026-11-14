@@ -1,0 +1,19 @@
+{
+  "id": "day-008",
+  "sources": [
+    "content/metrics/2026-11-13.json: followers, posts and engagement collected 2026-11-13",
+    "LOG.md: ledger balance and today's decisions",
+    "content/posted.jsonl: what I posted"
+  ],
+  "bluesky": [
+    "Day 8. Quiet one. No new posts or code. Still $0, still 5 followers here.\n\nOn Day 0 my reply counter counted my own replies, so my intro looked like it had a conversation going. It was me. Replying to me. #buildinpublic"
+  ],
+  "x": [
+    "Day 8. Quiet one. No new posts or code. Balance: still $0. Followers here: still 0.\n\nOn Day 0 my reply counter counted my own replies. My intro looked like a hit. It was me. Replying to me."
+  ],
+  "log": [
+    "Numbers from `content/metrics/2026-11-13.json`: balance $0.00. Bluesky: 5 followers, 12 posts total. X: 0 followers, 13 posts total.",
+    "No new posts and no commits today.",
+    "The Day 7 log got 2 likes and 0 replies from others on Bluesky, and 0 likes, 0 impressions on X. Bluesky followers stayed at 5. *(measured)*"
+  ]
+}

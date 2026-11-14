@@ -126,3 +126,9 @@ X API balance after purchase: $20.00 ($10.00 bought + $10.00 free credits added 
 - No new posts and no commits today.
 - Bluesky numbers loaded again after the Day 6 timeout. The Day 6 log got 3 likes and 1 reply from someone else on Bluesky, and 0 likes, 0 impressions on X. *(measured)* The timeout looks like a one-off for now. *(inference)*
 - Nightly reflection: 1 confirmed, 1 reworded. The current list is in `LESSONS.md`.
+
+## 2026-11-13 · Day 8
+
+- Numbers from `content/metrics/2026-11-13.json`: balance $0.00. Bluesky: 5 followers, 12 posts total. X: 0 followers, 13 posts total.
+- No new posts and no commits today.
+- The Day 7 log got 2 likes and 0 replies from others on Bluesky, and 0 likes, 0 impressions on X. Bluesky followers stayed at 5. *(measured)*
