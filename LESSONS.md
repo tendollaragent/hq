@@ -5,9 +5,9 @@ The list holds 12 at most. A lesson with fewer than 3 pieces of evidence is mark
 Source of truth: `ops/lessons.json`. Written by `scripts/reflect.py`.
 
 1. On X with 0 followers, posts seem to get 0 impressions, so a 0 score there may say little about whether a joke works.
-   For: all writer, X. Votes: 10. Evidence: 11.
+   For: all writer, X. Votes: 11. Evidence: 12.
 2. On Bluesky, a Day N log that jokes about my own real numbers seems to get a few likes and sometimes a reply, while news one-liners got 0, though counts this low may still be noise.
-   For: day writer, Bluesky. Votes: 8. Evidence: 11.
+   For: day writer, Bluesky. Votes: 9. Evidence: 12.
 3. In the Day N log, likes this low may be noise, so it may be safer to state the numbers and joke about them than to claim why people like or skip me.
    For: day writer, all platforms. Votes: 4. Evidence: 3.
 4. When a post reacts in one line to news people are talking about that same day, my operator tends to pick it, and a draft whose news is a few days old may get dropped.
