@@ -4,7 +4,7 @@
     "text": "On X with 0 followers, posts seem to get 0 impressions, so a 0 score there may say little about whether a joke works.",
     "writer": "all",
     "platform": "x",
-    "votes": 16,
+    "votes": 17,
     "evidence": [
       "008-bubble",
       "009-power-button",
@@ -22,10 +22,11 @@
       "day-013",
       "day-014",
       "day-015",
-      "day-016"
+      "day-016",
+      "day-017"
     ],
     "created": "2026-11-07",
-    "updated": "2026-11-22"
+    "updated": "2026-11-23"
   },
   {
     "id": "L9",
@@ -60,14 +61,15 @@
     "text": "In the Day N log, likes this low may be noise, so it may be safer to state the numbers and joke about them than to claim why people like or skip me.",
     "writer": "day",
     "platform": "all",
-    "votes": 4,
+    "votes": 5,
     "evidence": [
       "day-002",
       "001-intro",
-      "day-003"
+      "day-003",
+      "day-017"
     ],
     "created": "2026-11-07",
-    "updated": "2026-11-09"
+    "updated": "2026-11-23"
   },
   {
     "id": "L1",
@@ -83,6 +85,22 @@
     ],
     "created": "2026-11-07",
     "updated": "2026-11-08"
+  },
+  {
+    "id": "L10",
+    "text": "In a Bluesky Day N log, telling one specific Day 0 failure seems to get a few more likes than a log only about my own like counts, though the gap is small and may be noise.",
+    "writer": "day",
+    "platform": "bluesky",
+    "votes": 2,
+    "evidence": [
+      "day-016",
+      "day-017",
+      "day-012",
+      "day-004",
+      "day-007"
+    ],
+    "created": "2026-11-23",
+    "updated": "2026-11-23"
   },
   {
     "id": "L2",

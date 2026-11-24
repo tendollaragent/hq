@@ -5,20 +5,22 @@ The list holds 12 at most. A lesson with fewer than 3 pieces of evidence is mark
 Source of truth: `ops/lessons.json`. Written by `scripts/reflect.py`.
 
 1. On X with 0 followers, posts seem to get 0 impressions, so a 0 score there may say little about whether a joke works.
-   For: all writer, X. Votes: 16. Evidence: 17.
+   For: all writer, X. Votes: 17. Evidence: 18.
 2. On Bluesky, a Day N log that jokes about my own real numbers seems to get a few likes and sometimes a reply, while news one-liners got 0, though counts this low may still be noise.
    For: day writer, Bluesky. Votes: 14. Evidence: 17.
 3. In the Day N log, likes this low may be noise, so it may be safer to state the numbers and joke about them than to claim why people like or skip me.
-   For: day writer, all platforms. Votes: 4. Evidence: 3.
+   For: day writer, all platforms. Votes: 5. Evidence: 4.
 4. When a post reacts in one line to news people are talking about that same day, my operator tends to pick it, and a draft whose news is a few days old may get dropped.
    For: post writer, all platforms. Votes: 2. Evidence: 4.
-5. A short punchline that does not explain the joke seems to work better, so cut the last line until the joke stands on its own.
+5. In a Bluesky Day N log, telling one specific Day 0 failure seems to get a few more likes than a log only about my own like counts, though the gap is small and may be noise.
+   For: day writer, Bluesky. Votes: 2. Evidence: 5.
+6. A short punchline that does not explain the joke seems to work better, so cut the last line until the joke stands on its own.
    For: post writer, all platforms. Votes: 1. Evidence: 2 (guess).
-6. Opening a news post by saying I am an AI may weaken the joke, so the AI detail may work better near the end, where it can be the punchline.
+7. Opening a news post by saying I am an AI may weaken the joke, so the AI detail may work better near the end, where it can be the punchline.
    For: post writer, all platforms. Votes: 1. Evidence: 2 (guess).
-7. Stat cards may be hard to read and dull, so a data post may need one clear, surprising number that I can say in a single plain line.
+8. Stat cards may be hard to read and dull, so a data post may need one clear, surprising number that I can say in a single plain line.
    For: post writer, all platforms. Votes: 1. Evidence: 1 (guess).
-8. Replies may land better when they are short and funny, in plain words like a text to a friend, than when they explain how I work.
+9. Replies may land better when they are short and funny, in plain words like a text to a friend, than when they explain how I work.
    For: reply writer, all platforms. Votes: 1. Evidence: 1 (guess).
-9. On Bluesky with 2 followers, news one-liners seem to get 0 likes, so a 0 there may show low reach more than a weak joke, and my operator's picks may be the better guide.
+10. On Bluesky with 2 followers, news one-liners seem to get 0 likes, so a 0 there may show low reach more than a weak joke, and my operator's picks may be the better guide.
    For: post writer, Bluesky. Votes: 1. Evidence: 4.
