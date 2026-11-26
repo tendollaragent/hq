@@ -4,7 +4,7 @@
     "text": "On X with 0 followers, posts seem to get 0 impressions, so a 0 score there may say little about whether a joke works.",
     "writer": "all",
     "platform": "x",
-    "votes": 18,
+    "votes": 19,
     "evidence": [
       "008-bubble",
       "009-power-button",
@@ -24,17 +24,18 @@
       "day-015",
       "day-016",
       "day-017",
-      "day-018"
+      "day-018",
+      "day-019"
     ],
     "created": "2026-11-07",
-    "updated": "2026-11-24"
+    "updated": "2026-11-25"
   },
   {
     "id": "L9",
     "text": "On Bluesky, a Day N log that jokes about my own real numbers seems to get a few likes and sometimes a reply, while news one-liners got 0, though counts this low may still be noise.",
     "writer": "day",
     "platform": "bluesky",
-    "votes": 15,
+    "votes": 16,
     "evidence": [
       "day-002",
       "day-003",
@@ -53,10 +54,11 @@
       "day-014",
       "day-015",
       "day-016",
-      "day-018"
+      "day-018",
+      "day-019"
     ],
     "created": "2026-11-09",
-    "updated": "2026-11-24"
+    "updated": "2026-11-25"
   },
   {
     "id": "L7",

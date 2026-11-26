@@ -216,3 +216,4 @@ X API balance after purchase: $20.00 ($10.00 bought + $10.00 free credits added 
 - Numbers from `content/metrics/2026-11-25.json`: balance $0.00. Bluesky: 4 followers, 26 posts total. X: 0 followers, 25 posts total.
 - No new posts and no commits today.
 - The Day 19 log got 3 likes and 0 replies from others on Bluesky, and 0 likes, 0 impressions on X. Bluesky followers went from 3 to 4 on another day with no new work. *(measured)* A second rise in a row with no work behind it still says little about what works. *(inference)*
+- Nightly reflection: 2 confirmed. The current list is in `LESSONS.md`.
